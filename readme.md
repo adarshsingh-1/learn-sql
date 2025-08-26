@@ -1,6 +1,6 @@
 # SQL Practice Solutions
 
-This repository contains my SQL solutions from [sql-practice.com](https://www.sql-practice.com/).
+This repository contains my SQL solutions from [sql-practice.com](https://www.sql-practice.com).
 
 ## Content
 - Each file has the problem statement (as a comment) and its solution.
