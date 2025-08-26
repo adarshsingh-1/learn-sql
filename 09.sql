@@ -1,5 +1,18 @@
--- Show how many patients have a birth_date with 2010 as the birth year.
+--Show the first_name, last_name, and height of the patient with the greatest height.
 
-SELECT COUNT(*) AS total_patients
+
+SELECT first_name, last_name, height
 FROM patients
-WHERE YEAR(birth_date) = 2010;
+WHERE height = (
+  SELECT MAX(height)
+  FROM patients
+);
+
+-- OR
+
+
+SELECT
+  first_name,
+  last_name,
+  MAX(height) AS height
+FROM patients;

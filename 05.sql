@@ -1,5 +1,5 @@
--- Show first name and last name of patients that weight within the range of 100 to 120 (inclusive)
+-- Update the patients table for the allergies column. If the patient's allergies is null then replace it with 'NKA'
 
-SELECT first_name, last_name
-FROM patients
-where weight >= 100 and weight <= 120;
+update patients
+SET allergies = 'NKA'
+where allergies IS NULL;

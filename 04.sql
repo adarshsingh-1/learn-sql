@@ -1,5 +1,5 @@
---Show first name of patients that start with the letter 'C'
+-- Show first name and last name of patients that weight within the range of 100 to 120 (inclusive)
 
-SELECT first_name
+SELECT first_name, last_name
 FROM patients
-where first_name LIKE 'C%';
+where weight >= 100 and weight <= 120;

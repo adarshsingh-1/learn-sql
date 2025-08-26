@@ -1,18 +1,6 @@
---Show the first_name, last_name, and height of the patient with the greatest height.
+-- Show all columns for patients who have one of the following patient_ids:
+-- 1,45,534,879,1000
 
-
-SELECT first_name, last_name, height
+SELECT *
 FROM patients
-WHERE height = (
-  SELECT MAX(height)
-  FROM patients
-);
-
--- OR
-
-
-SELECT
-  first_name,
-  last_name,
-  MAX(height) AS height
-FROM patients;
+WHERE patient_id IN (1,45,534,879,1000);

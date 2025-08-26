@@ -1,4 +1,9 @@
--- Show first name and last name concatinated into one column to show their full name.
+-- Show first name, last name, and the full province name of each patient.
 
-select CONCAT(first_name,' ',last_name) AS full_name
-from patients;
+-- Example: 'Ontario' instead of 'ON'
+
+
+select first_name, last_name, province_name
+FROm patients
+JOIN province_names
+ON province_names.province_id = patients.province_id;

@@ -1,9 +1,5 @@
--- Show first name, last name, and the full province name of each patient.
+-- Show how many patients have a birth_date with 2010 as the birth year.
 
--- Example: 'Ontario' instead of 'ON'
-
-
-select first_name, last_name, province_name
-FROm patients
-JOIN province_names
-ON province_names.province_id = patients.province_id;
+SELECT COUNT(*) AS total_patients
+FROM patients
+WHERE YEAR(birth_date) = 2010;
